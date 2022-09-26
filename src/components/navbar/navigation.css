@@ -1,0 +1,28 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: rgb(20, 20, 20);
+  border-bottom: 1px solid #6f6979;
+  box-shadow: 0 1px 2px rgba(125, 125, 125, 0.33);
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo {
+  margin-left: 5vw;
+  max-height: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+  }
+  .logo {
+    margin-left: 0;
+  }
+}

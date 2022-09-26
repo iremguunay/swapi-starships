@@ -1,29 +1,4 @@
 .App {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.App-logo {
-  height: 10vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-updown infinite 8s linear;
-    position: absolute;
-    top: 10em;
-  }
-}
-
-@keyframes App-logo-updown {
-  0%,
-  100% {
-    top: 10em;
-  }
-  50% {
-    top: 8em;
-  }
+  color: white;
+  margin-bottom: 70px;
 }
