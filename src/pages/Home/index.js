@@ -2,7 +2,7 @@ import "./style.css";
 import { useEffect } from "react";
 
 import { useSelector, useDispatch } from "react-redux";
-import { fetchStarships } from "../../redux/starships/starshipsSlice";
+import { fetchStarships, getSearchResult } from "../../redux/starships/starshipsSlice";
 
 // components
 import Card from "../../components/card/Card";
@@ -14,6 +14,8 @@ import CardTitle from "../../components/card/CardTitle";
 import LoadMore from "../../components/button/LoadMore";
 
 import Loader from "../../components/loader/Loader";
+
+import SearchBar from "../../components/search/SearchBar";
 
 // image json
 import starshipsImages from "../../starshipImages.json";
@@ -28,16 +30,24 @@ const Home = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchStarships(baseURL));
-  }, [dispatch, baseURL]);
+    if (status === "idle") {
+      dispatch(fetchStarships(baseURL));
+    }
+  }, [dispatch, baseURL, status]);
 
   const loadNextPage = () => {
     dispatch(fetchStarships(nextPageURL));
+  };
+
+  const handleSearch = (event) => {
+    dispatch(getSearchResult(event.target.value));
   }
 
   return (
     <div className="Home">
-      {/* card componenet - start */}
+      {/* searchBar component - start */}
+      <SearchBar placeholder="Search for..." onChange={handleSearch}/>
+      {/* card component - start */}
       <div className="container">
         {starships.map((starship, index) => (
           <Card key={index}>
@@ -47,7 +57,7 @@ const Home = () => {
               ) : null
             )}
             <CardBody>
-              <CardTitle title={starship.name}/>
+              <CardTitle title={starship.name} />
               <CardText>
                 <span>
                   <strong>Model:</strong> {starship.model}
@@ -68,9 +78,7 @@ const Home = () => {
       {hasNextPage && status !== "loading" && (
         <LoadMore onClick={loadNextPage} />
       )}
-      {!hasNextPage && (
-        <div className="no-more">No more starships</div>
-      )}
+      {!hasNextPage && <div className="no-more">No more starships</div>}
     </div>
   );
 };

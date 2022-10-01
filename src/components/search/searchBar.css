@@ -1,0 +1,36 @@
+.SearchBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.search {
+  width: 50%;
+  height: 2.8rem;
+  background: rgba(65, 65, 65, 0.335);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  outline: none;
+  border: none;
+  border-radius: 1.625rem;
+  margin-top: 16vh;
+  padding: 0 3.5rem 0 1.5rem;
+  font-size: 1rem;
+  color: rgb(234, 234, 234);
+  background-image: url("https://img.icons8.com/ios-glyphs/30/9d9d9d/search--v1.png");
+  background-position: right 1.2rem center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+}
+
+.search::placeholder {
+  color: rgb(162, 162, 162);
+}
+
+@media screen and (max-width: 768px) {
+  .search {
+    width: 70%;
+  }
+}
