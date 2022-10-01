@@ -186,7 +186,7 @@
 
 @media only screen and (max-width: 500px) {
   .main-card {
-    min-width: 48vh;
+    min-width: 38vh;
     margin: 20px 80px 80px;
   }
 
