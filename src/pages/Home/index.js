@@ -68,6 +68,9 @@ const Home = () => {
       {hasNextPage && status !== "loading" && (
         <LoadMore onClick={loadNextPage} />
       )}
+      {!hasNextPage && (
+        <div className="no-more">No more starships</div>
+      )}
     </div>
   );
 };

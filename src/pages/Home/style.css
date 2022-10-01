@@ -1,13 +1,18 @@
 .Home {
-    text-align: center;
+  text-align: center;
 }
 
 .container {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 40px 0;
-  }
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+.no-more {
+  color: "#cecece";
+  margin: "10px 0 70px";
+}
