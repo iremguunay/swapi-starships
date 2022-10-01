@@ -11,12 +11,17 @@ import CardBody from "../../components/card/CardBody";
 import CardText from "../../components/card/CardText";
 import CardTitle from "../../components/card/CardTitle";
 
+import LoadMore from "../../components/button/LoadMore";
+
 // image json
 import starshipsImages from "../../starshipImages.json";
 
 const Home = () => {
   const baseURL = useSelector((state) => state.starships.baseURL);
   const starships = useSelector((state) => state.starships.items);
+  const status = useSelector((state) => state.starships.status);
+  const hasNextPage = useSelector((state) => state.starships.hasNextPage);
+  const nextPageURL = useSelector((state) => state.starships.nextURL);
 
   const dispatch = useDispatch();
 
@@ -24,8 +29,13 @@ const Home = () => {
     dispatch(fetchStarships(baseURL));
   }, [dispatch, baseURL]);
 
+  const loadNextPage = () => {
+    dispatch(fetchStarships(nextPageURL));
+  }
+
   return (
     <div className="Home">
+      {/* card componenet - start */}
       <div className="container">
         {starships.map((starship, index) => (
           <Card key={index}>
@@ -50,6 +60,10 @@ const Home = () => {
           </Card>
         ))}
       </div>
+      {/* load more - start */}
+      {hasNextPage && status !== "loading" && (
+        <LoadMore onClick={loadNextPage} />
+      )}
     </div>
   );
 };

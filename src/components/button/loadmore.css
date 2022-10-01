@@ -1,0 +1,29 @@
+.LoadMore {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 70px;
+}
+
+.load-button {
+  background-color: rgba(36, 36, 36, 0);
+  border: 1px solid #262626;
+  border-radius: 1.625rem;
+  color: rgb(230, 230, 230);
+  padding: 14px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: background-color 0.4s ease-in-out;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s;
+}
+
+.load-button:hover {
+  background-color: #232323;
+  color: white;
+  transform: perspective(1px) scale3d(1.05, 1.05, 1) translateZ(0) !important;
+}
