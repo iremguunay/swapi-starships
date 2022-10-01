@@ -13,6 +13,8 @@ import CardTitle from "../../components/card/CardTitle";
 
 import LoadMore from "../../components/button/LoadMore";
 
+import Loader from "../../components/loader/Loader";
+
 // image json
 import starshipsImages from "../../starshipImages.json";
 
@@ -60,6 +62,8 @@ const Home = () => {
           </Card>
         ))}
       </div>
+      {/* loader - start */}
+      {status === "loading" && <Loader />}
       {/* load more - start */}
       {hasNextPage && status !== "loading" && (
         <LoadMore onClick={loadNextPage} />
