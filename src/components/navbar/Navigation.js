@@ -1,13 +1,16 @@
-import './navigation.css'
+import { Link } from "react-router-dom";
+import "./navigation.css";
 
-const Navigation = ({logo}) => {
+const Navigation = ({ logo }) => {
   return (
     <>
-      <header className='navbar'>
-        <img src={logo} className='logo' alt='Star Wars'/>
+      <header className="navbar">
+        <Link to="/">
+          <img src={logo} className="logo" alt="Star Wars" />
+        </Link>
       </header>
     </>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;
