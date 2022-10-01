@@ -7,7 +7,9 @@ import { fetchStarships } from "../../redux/starships/starshipsSlice";
 // components
 import Card from "../../components/card/Card";
 import CardImage from "../../components/card/CardImage";
+import CardBody from "../../components/card/CardBody";
 import CardText from "../../components/card/CardText";
+import CardTitle from "../../components/card/CardTitle";
 
 // image json
 import starshipsImages from "../../starshipImages.json";
@@ -27,16 +29,24 @@ const Home = () => {
       <div className="container">
         {starships.map((starship, index) => (
           <Card key={index}>
-            {starshipsImages.map((item) => 
+            {starshipsImages.map((item) =>
               item.name === starship.name ? (
-                <CardImage src={item.image} alt={item.name} key={item.id}/>
+                <CardImage src={item.image} alt={item.name} key={item.id} />
               ) : null
-            )}  
-            <CardText
-              title={starship.name}
-              model={starship.model}
-              rate={starship.hyperdrive_rating}
-            />
+            )}
+            <CardBody>
+              <CardTitle title={starship.name}/>
+              <CardText>
+                <span>
+                  <strong>Model:</strong> {starship.model}
+                </span>
+                <br />
+                <span>
+                  <strong>Hyperdrive Rating:</strong>{" "}
+                  {starship.hyperdrive_rating}
+                </span>
+              </CardText>
+            </CardBody>
           </Card>
         ))}
       </div>
