@@ -1,8 +1,9 @@
 import axios from "axios";
 
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
+// components
 import DetailCard from "../../components/detailcard/DetailCard";
 import DetailCardImage from "../../components/detailcard/DetailCardImage";
 import DetailCardBody from "../../components/detailcard/DetailCardBody";
@@ -10,6 +11,7 @@ import DetailCardTitle from "../../components/detailcard/DetailCardTitle";
 import DetailCardText from "../../components/detailcard/DetailCardText";
 
 import Loader from "../../components/loader/Loader";
+import GoBack from "../../components/button/GoBack";
 
 import starshipImages from "../../starshipImages.json";
 
@@ -17,6 +19,7 @@ const Detail = () => {
   const [starship, setStarship] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  const navigate = useNavigate();
   const { starshipId } = useParams();
 
   // fetch from API again to avoid losing access to starship details when we refresh the page
@@ -31,8 +34,13 @@ const Detail = () => {
     (image) => image.name === starship?.name
   );
 
+  const goBack = () => {
+    navigate(-1);
+  };
+
   return (
     <>
+      <GoBack onClick={goBack} />
       {loading && <Loader />}
       {starship && (
         <DetailCard>
