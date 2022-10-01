@@ -1,0 +1,183 @@
+[
+    {
+      "id": 1,
+      "name": "CR90 corvette",
+      "image": "images/cr90-corvette.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Star Destroyer",
+      "image": "images/star-destroyer.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Sentinel-class landing craft",
+      "image": "images/sentinel-class-landing-craft.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Death Star",
+      "image": "images/death-star.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Millennium Falcon",
+      "image": "images/millennium-falcon.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Y-wing",
+      "image": "images/y-wing.jpg"
+    },
+    {
+      "id": 7,
+      "name": "X-wing",
+      "image": "images/x-wing.jpg"
+    },
+    {
+      "id": 8,
+      "name": "TIE Advanced x1",
+      "image": "images/tie-advanced-x1.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Executor",
+      "image": "images/executor.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Rebel transport",
+      "image": "images/rebel-transport.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Slave 1",
+      "image": "images/slave-1.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Imperial shuttle",
+      "image": "images/imperial-shuttle.jpg"
+    },
+    {
+      "id": 13,
+      "name": "EF76 Nebulon-B escort frigate",
+      "image": "images/ef76-nebulon-b-escort-frigate.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Calamari Cruiser",
+      "image": "images/calamari-cruiser.jpg"
+    },
+    {
+      "id": 15,
+      "name": "A-wing",
+      "image": "images/a-wing.jpg"
+    },
+    {
+      "id": 16,
+      "name": "B-wing",
+      "image": "images/b-wing.jpg"
+    },
+    {
+      "id": 17,
+      "name": "Republic Cruiser",
+      "image": "images/republic-cruiser.jpg"
+    },
+    {
+      "id": 18,
+      "name": "Droid control ship",
+      "image": "images/droid-control-ship.jpg"
+    },
+    {
+      "id": 19,
+      "name": "Naboo fighter",
+      "image": "images/naboo-fighter.jpg"
+    },
+    {
+      "id": 20,
+      "name": "Naboo Royal Starship",
+      "image": "images/naboo-royal-starship.jpg"
+    },
+    {
+      "id": 21,
+      "name": "Scimitar",
+      "image": "images/scimitar.jpg"
+    },
+    {
+      "id": 22,
+      "name": "J-type diplomatic barge",
+      "image": "images/j-type-diplomatic-barge.jpg"
+    },
+    {
+      "id": 23,
+      "name": "AA-9 Coruscant freighter",
+      "image": "images/aa-9-coruscant-freighter.jpg"
+    },
+    {
+      "id": 24,
+      "name": "Jedi starfighter",
+      "image": "images/jedi-starfighter.jpg"
+    },
+    {
+      "id": 25,
+      "name": "H-type Nubian yacht",
+      "image": "images/h-type-nubian-yacht.jpg"
+    },
+    {
+      "id": 26,
+      "name": "Republic Assault ship",
+      "image": "images/republic-assault-ship.jpg"
+    },
+    {
+      "id": 27,
+      "name": "Solar Sailer",
+      "image": "images/solar-sailer.jpg"
+    },
+    {
+      "id": 28,
+      "name": "Trade Federation cruiser",
+      "image": "images/trade-federation-cruiser.jpg"
+    },
+    {
+      "id": 29,
+      "name": "Theta-class T-2c shuttle",
+      "image": "images/theta-class-t-2c-shuttle.jpg"
+    },
+    {
+      "id": 30,
+      "name": "Republic attack cruiser",
+      "image": "images/republic-attack-cruiser.jpg"
+    },
+    {
+      "id": 31,
+      "name": "Naboo star skiff",
+      "image": "images/naboo-star-skiff.jpg"
+    },
+    {
+      "id": 32,
+      "name": "Jedi Interceptor",
+      "image": "images/jedi-interceptor.jpg"
+    },
+    {
+      "id": 33,
+      "name": "arc-170",
+      "image": "images/arc-170.jpg"
+    },
+    {
+      "id": 34,
+      "name": "Banking clan frigte",
+      "image": "images/banking-clan-frigte.jpg"
+    },
+    {
+      "id": 35,
+      "name": "Belbullab-22 starfighter",
+      "image": "images/belbullab-22-starfighter.jpg"
+    },
+    {
+      "id": 36,
+      "name": "V-wing",
+      "image": "images/v-wing.jpg"
+    }
+  ]
+  
