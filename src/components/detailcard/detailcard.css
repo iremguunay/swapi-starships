@@ -186,8 +186,8 @@
 
 @media only screen and (max-width: 500px) {
   .main-card {
-    min-width: 38vh;
-    margin: 20px 80px 80px;
+    min-width: 40vh;
+    margin: 20px 60px 80px;
   }
 
   .main-card .content-left {
