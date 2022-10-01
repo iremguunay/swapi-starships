@@ -2,3 +2,27 @@
   color: white;
   margin-bottom: 70px;
 }
+
+.App::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#0c0c0c, #731dbf);
+  clip-path: circle(20% at right 65%);
+  z-index: -100;
+}
+
+.App::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#716e32, #949090);
+  clip-path: circle(20% at 10% 10%);
+  z-index: -100;
+}
