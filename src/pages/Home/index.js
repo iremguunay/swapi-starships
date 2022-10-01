@@ -23,6 +23,7 @@ import SearchBar from "../../components/search/SearchBar";
 
 // image json
 import starshipsImages from "../../starshipImages.json";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const baseURL = useSelector((state) => state.starships.baseURL);
@@ -48,6 +49,12 @@ const Home = () => {
     dispatch(getSearchResult(event.target.value));
   };
 
+  // get id from starships url property to use in detail page
+  const findUrlId = (url) => {
+    const id = url.match(/\/(\d+)+[/]?/g);
+    return id[0].replace(/\//g, "");
+  };
+
   if (status === "failed") {
     return (
       <>
@@ -67,26 +74,32 @@ const Home = () => {
       {/* card component - start */}
       <div className="container">
         {starships.map((starship, index) => (
-          <Card key={index}>
-            {starshipsImages.map((item) =>
-              item.name === starship.name ? (
-                <CardImage src={item.image} alt={item.name} key={item.id} />
-              ) : null
-            )}
-            <CardBody>
-              <CardTitle title={starship.name} />
-              <CardText>
-                <span>
-                  <strong>Model:</strong> {starship.model}
-                </span>
-                <br />
-                <span>
-                  <strong>Hyperdrive Rating:</strong>{" "}
-                  {starship.hyperdrive_rating}
-                </span>
-              </CardText>
-            </CardBody>
-          </Card>
+          <Link
+            to={`/starships/${findUrlId(starship.url)}`}
+            className="card-link"
+            key={index}
+          >
+            <Card>
+              {starshipsImages.map((item) =>
+                item.name === starship.name ? (
+                  <CardImage src={item.image} alt={item.name} key={item.id} />
+                ) : null
+              )}
+              <CardBody>
+                <CardTitle title={starship.name} />
+                <CardText>
+                  <span>
+                    <strong>Model:</strong> {starship.model}
+                  </span>
+                  <br />
+                  <span>
+                    <strong>Hyperdrive Rating:</strong>{" "}
+                    {starship.hyperdrive_rating}
+                  </span>
+                </CardText>
+              </CardBody>
+            </Card>
+          </Link>
         ))}
       </div>
       {/* loader - start */}
