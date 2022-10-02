@@ -12,12 +12,14 @@ import DetailCardText from "../../components/detailcard/DetailCardText";
 
 import Loader from "../../components/loader/Loader";
 import GoBack from "../../components/button/GoBack";
+import Error from "../../components/error/Error";
 
 import starshipImages from "../../starshipImages.json";
 
 const Detail = () => {
   const [starship, setStarship] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const navigate = useNavigate();
   const { starshipId } = useParams();
@@ -27,6 +29,7 @@ const Detail = () => {
     axios(`${process.env.REACT_APP_API_BASE_URL}/starships/${starshipId}`)
       .then((response) => response.data)
       .then((data) => setStarship(data))
+      .catch((error) => setError(error))
       .finally(() => setLoading(false));
   }, [starshipId]);
 
@@ -65,6 +68,15 @@ const Detail = () => {
             </DetailCardText>
           </DetailCardBody>
         </DetailCard>
+      )}
+      {error && (
+        <Error>
+          <div style={{marginTop: "-150px"}}>
+          <h2>{error.code}</h2>
+          <h4>{error.message}</h4>
+          <p>It looks like one of the developers fell asleep :)</p>
+          </div>
+        </Error>
       )}
     </>
   );
